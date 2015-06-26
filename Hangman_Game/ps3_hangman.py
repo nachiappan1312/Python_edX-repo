@@ -1,6 +1,6 @@
 #  As a part of python learning course
 # 
-# Hangman game
+# Hangman game = Interactive word game"
 #
 
 # -----------------------------------
