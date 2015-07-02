@@ -9,21 +9,25 @@ def isIn(char, aStr):
     ret_var = False
     # Your code here
     strlen = len(aStr)
+    print "Character " +char
+    print "string " +aStr
     print strlen
     if strlen < 1:
         return False
-    '''if strlen ==1 and not aStr[strlen] == char:
-        return False'''
+    if strlen ==1 and aStr == char:
+        return True
+    elif strlen == 1 and not aStr == char:
+        return False
     mid_char = aStr[strlen/2]
-    print mid_char
-    if char == mid_char:
+    print "midchar: " +mid_char
+    if mid_char == char:
         return True
     elif char < mid_char:
-        isIn(char,aStr[:strlen/2])
+        return isIn(char,aStr[:strlen/2])
     elif char > mid_char:
-        isIn(char,aStr[strlen/2:])
+        return isIn(char,aStr[strlen/2:])
     else:
         ret_var = False
     return ret_var
 
-print isIn('n', 'lmpprstvww')
+print isIn('d', 'admqvyz')
